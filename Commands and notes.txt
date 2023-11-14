@@ -54,6 +54,19 @@ Sqlite
 ** Select Database
 ** Browse with "SQLITE EXPLORER" in the files panel
 
+Angular Language Service
+* Editor services for Angular templates
+
+
+VS Code Settings
+==================================================================
+Settings: 						File >> Preferences >> Settings
+Bracket Pair Colorization: 		Enabled
+Guides: Bracket Pairs:			True
+Auto Closing Brackets:			Always
+Auto Closing Quotes:			Always
+
+
 
 VS Code Commands - Shortcuts
 ==================================================================
@@ -204,7 +217,52 @@ Create dotnet gitignore file: 		PS D:\__BobbyLearning\angular\DatingApp> dotnet 
 Add appsettings.json to gitignore:	Under source control, right-click file and select "add to gitignore"
 Generate global.json file:			PS D:\__BobbyLearning\angular\DatingApp> dotnet new globaljson
 * This records the current runtime version
+Add files to repository:			PS D:\__BobbyLearning\angular\DatingApp> git add .
+Commit Files to repository:			PS D:\__BobbyLearning\angular\DatingApp> git commit -m "End of section2"
+Rename master to main:				PS D:\__BobbyLearning\angular\DatingApp> git branch -M main
+Add remote origin:					PS D:\__BobbyLearning\angular\DatingApp> git remote add origin https://github.com/renloe/DatingApp.git
+Push to Github:						PS D:\__BobbyLearning\angular\DatingApp> git push -u origin main
 
+
+ng commands
+==================================================================
+Create client project:				PS D:\__BobbyLearning\angular\DatingApp> ng new client
+Start Dev Server:					PS D:\__BobbyLearning\angular\DatingApp\client> ng serve
+* Default Address:					http://localhost:4200/
+
+
+Adding Bootstrap and Font-awesome
+==================================================================
+Bootstrap: 
+https://valor-software.com/ngx-bootstrap/#/
+PS D:\__BobbyLearning\angular\DatingApp\client> ng add ngx-bootstrap
+* Need to restart client after bootstrap install
+
+Font-Awesome:
+PS D:\__BobbyLearning\angular\DatingApp\client> npm install font-awesome
+* Angular.json Section >> projects >> client >> architect >> >> build >> options >> styles 
+add the following: "./node_modules/font-awesome/css/font-awesome.min.css",
+
+
+Adding https to angular client using mkcert
+==================================================================
+https://github.com/FiloSottile/mkcert
+Open command prompt as Administrator: 	C:\Windows\System32> choco install mkcert
+Create ssl directory:					PS D:\__BobbyLearning\angular\DatingApp\client> mkdir ssl
+Install CA Cert:						D:\__BobbyLearning\angular\DatingApp\client\ssl> mkcert -install
+Localhost Cert:							PS D:\__BobbyLearning\angular\DatingApp\client\ssl> mkcert localhost
+Angular.json >> serve section
+* Add the following:
+	 "options": {
+				"ssl": true,
+				"sslCert": "./ssl/localhost.pem",
+				"sslKey": "./ssl/localhost-key.pem"
+			  },
+* Restart Client
+* https://localhost:4200
+* API Program.cs - Update Cors
+	app.UseCors(builder => builder.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:4200"));
+* Restart API
 
 
 
