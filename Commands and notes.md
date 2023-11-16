@@ -422,13 +422,12 @@ _This generates the .vscode folder with launch.json files_
 
 # JWT Decoders
 
-http://jwt.ms\
-_Paste token to see decoding_
+http://jwt.ms
 
 Example Token:\
 `eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoic2FtIiwibmJmIjoxNzAwMDk4MzE4LCJleHAiOjE3MDA3MDMxMTgsImlhdCI6MTcwMDA5ODMxOH0.zxq1mR0M8Qtf7goYe4sQHyNX7qSZIgk_P0vCawhz5GGrYhcWQHjbzThOsLJ4SAhRJJqNh0ZhVT__SBuMf-3dCg`
 
-Output:\
+Output:
 
 ```json
 {
@@ -442,8 +441,8 @@ Output:\
 }.[Signature]
 ```
 
-http://jwt.io\
-JSON Web Tokens are an open, industry standard RFC 7519 method for representing claims securely between two parties.
+http://jwt.io
+> JSON Web Tokens are an open, industry standard RFC 7519 method for representing claims securely between two parties.
 JWT.IO allows you to decode, verify and generate JWT.
 
 <br><br>
