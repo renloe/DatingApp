@@ -442,9 +442,85 @@ Output:
 ```
 
 http://jwt.io
+
 > JSON Web Tokens are an open, industry standard RFC 7519 method for representing claims securely between two parties.
-JWT.IO allows you to decode, verify and generate JWT.
+> JWT.IO allows you to decode, verify and generate JWT.
 
 <br><br>
 
 ---
+
+# Toast Service
+
+https://github.com/scttcper/ngx-toastr
+
+- Install ngx-toastr: BobbyLearning\angular\DatingApp\client> `npm install ngx-toastr@17.0.2`
+
+- Add ngx-toastr css refernece to the angular.json styles section
+- Update angular.json styles section: `"./node_modules/ngx-toastr/toastr.css"`
+- _Client restart is necessary after updating angular.json_
+
+```json
+ "styles": [
+              "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/font-awesome/css/font-awesome.min.css",
+              "./node_modules/ngx-toastr/toastr.css",
+              "src/styles.css"
+            ],
+            "scripts": []
+```
+
+- Add ToastrModule to app.module.ts imports
+
+```javascript
+imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    BsDropdownModule.forRoot(),
+    ToastrModule.forRoot({
+      positionClass: 'toast-bottom-right',
+    }),
+],
+```
+
+- Usage:
+
+```javascript
+constructor(private accountService: AccountService, private toastr: ToastrService) {}
+  ngOnInit(): void {}
+
+  register() {
+    this.accountService.register(this.model).subscribe({
+      next: (response) => {
+        this.cancel();
+      },
+      error: (error) => this.toastr.error(error.error,),
+    });
+  }
+```
+
+---
+
+# Bootswatch
+
+https://bootswatch.com/
+
+- Install Bootswatch: BobbyLearning\angular\DatingApp\client> `npm install bootswatch`
+- Update angular.json styles section: `"./node_modules/bootswatch/dist/united/bootstrap.css"'`
+- _Client restart is necessary after updating angular.json_
+
+```json
+ "styles": [
+              "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/bootswatch/dist/united/bootstrap.css",
+              "./node_modules/font-awesome/css/font-awesome.min.css",
+              "./node_modules/ngx-toastr/toastr.css",
+              "src/styles.css"
+            ],
+            "scripts": []
+```
