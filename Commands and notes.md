@@ -71,6 +71,10 @@ API\API.csproj
 
 - Editor services for Angular templates
 
+### AngularTools - Allan Simonsen
+
+- AngularTools is a Visual Studio Code extension with a collection of tools for exploring an Angular project, help you with documenting, reverse engineering a project or help when refactoring.
+
 <br><br>
 
 ---
@@ -107,6 +111,10 @@ API\API.csproj
 ### Microsoft.AspNetCore.Authentication.JwtBearer by Microsoft
 
 - ASP.NET Core middleware that enables an application to receive an OpenID Connect bearer token.
+
+### AutoMapper.Extensions.Microsoft.DependencyInjection
+
+- AutoMapper extension for ASP.NET Core.
   <br><br>
 
 ---
@@ -503,7 +511,7 @@ constructor(private accountService: AccountService, private toastr: ToastrServic
   }
 ```
 
----
+## <br><br>
 
 # Bootswatch
 
@@ -524,3 +532,11 @@ https://bootswatch.com/
             ],
             "scripts": []
 ```
+
+## <br><br>
+
+# JSON Generator
+
+https://json-generator.com/
+
+<br><br>
