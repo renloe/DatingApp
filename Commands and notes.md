@@ -539,4 +539,33 @@ https://bootswatch.com/
 
 https://json-generator.com/
 
+- JSON Generator. Generate any data in any quantity.
+
 <br><br>
+
+---
+
+# JSON to Typescript
+
+https://json2ts.vercel.app/
+
+- Generate TypeScript Interfaces from JSON.
+
+## <br><br>
+
+# Angular Environment Variables
+
+- BobbyLearning\angular\DatingApp\client> `ng g environments`
+- The following files are created:
+  - CREATE src/environments/environment.ts (31 bytes)
+  - CREATE src/environments/environment.development.ts (31 bytes)
+
+## <br><br>
+
+# Ng-gallery
+
+https://ngx-gallery.netlify.app/#/
+
+- Simplifies the process of creating beautiful galleries.
+
+BobbyLearning\angular\DatingApp\client> `npm i ng-gallery @angular/cdk`
