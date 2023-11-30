@@ -75,6 +75,10 @@ API\API.csproj
 
 - AngularTools is a Visual Studio Code extension with a collection of tools for exploring an Angular project, help you with documenting, reverse engineering a project or help when refactoring.
 
+### Bookmarks - Alessandro Fragnani
+
+- Mark lines and jump to them
+
 <br><br>
 
 ---
@@ -564,8 +568,63 @@ https://json2ts.vercel.app/
 
 # Ng-gallery
 
-https://ngx-gallery.netlify.app/#/
+### Simplifies the process of creating beautiful galleries.
 
-- Simplifies the process of creating beautiful galleries.
+**Link**: https://ngx-gallery.netlify.app/#/
 
-BobbyLearning\angular\DatingApp\client> `npm i ng-gallery @angular/cdk`
+**Install**: BobbyLearning\angular\DatingApp\client> `npm i ng-gallery @angular/cdk`
+<br><br>
+
+---
+
+# ngx-spinner
+
+### An animated loading spinner for Angular 4+ versions that is intended to inform the user that an operation is in progress.
+
+**Demo Page**: https://napster2210.github.io/ngx-spinner/\
+**GitHub Page**: https://github.com/Napster2210/ngx-spinner
+
+**Install**: BobbyLearning\angular\DatingApp\client> `npm install ngx-spinner`
+
+- Angular.json Section >> projects >> client >> architect >> >> build >> options >> styles\
+   _Add the following: "`./node_modules/ngx-spinner/animations/line-scale-party.css`",_
+
+```json
+"styles": [
+              "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/bootswatch/dist/united/bootstrap.css",
+              "./node_modules/font-awesome/css/font-awesome.min.css",
+              "./node_modules/ngx-toastr/toastr.css",
+              "./node_modules/ngx-spinner/animations/line-scale-party.css",
+              "src/styles.css"
+            ],
+            "scripts": []
+```
+
+- Update shared.modeule.ts with NgxSpinnerModule
+
+```javascript
+import { NgxSpinnerModule } from 'ngx-spinner';
+
+@NgModule({
+  declarations: [],
+  imports: [
+    CommonModule,
+    BsDropdownModule.forRoot(),
+    TabsModule.forRoot(),
+    ToastrModule.forRoot({
+      positionClass: 'toast-bottom-right',
+    }),
+    NgxSpinnerModule.forRoot({
+      type: 'line-scale-party',
+    }),
+  ],
+  exports: [BsDropdownModule, TabsModule, ToastrModule, NgxSpinnerModule],
+})
+```
+
+_Need to restart client after NgxSpinner install_
+<br><br>
+
+---
