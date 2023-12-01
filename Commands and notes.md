@@ -119,6 +119,10 @@ API\API.csproj
 ### AutoMapper.Extensions.Microsoft.DependencyInjection
 
 - AutoMapper extension for ASP.NET Core.
+
+### CloudinaryDotNet by Cloudinary
+
+- Official client library for easily integrating with the Cloudinary service.
   <br><br>
 
 ---
@@ -625,6 +629,47 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 ```
 
 _Need to restart client after NgxSpinner install_
+<br><br>
+
+---
+
+# ng2-file-upload
+
+### The Angular2 File Upload directives.
+
+**Link**: https://valor-software.com/ng2-file-upload/
+
+**Install**: BobbyLearning\angular\DatingApp\client> `npm i ng2-file-upload`
+
+- Update shared.modeule.ts with FileUploadModule
+
+```javascript
+import { FileUploadModule } from 'ng2-file-upload';
+
+@NgModule({
+  declarations: [],
+  imports: [
+    CommonModule,
+    BsDropdownModule.forRoot(),
+    TabsModule.forRoot(),
+    ToastrModule.forRoot({
+      positionClass: 'toast-bottom-right',
+    }),
+    NgxSpinnerModule.forRoot({
+      type: 'line-scale-party',
+    }),
+    FileUploadModule,
+  ],
+  exports: [
+    BsDropdownModule,
+    TabsModule,
+    ToastrModule,
+    NgxSpinnerModule,
+    FileUploadModule,
+  ],
+})
+```
+
 <br><br>
 
 ---
